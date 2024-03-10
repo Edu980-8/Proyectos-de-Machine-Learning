@@ -36,5 +36,8 @@ plt.figure(figsize=(30,8))
 plt.plot(x,data[:,INDUS],'y-', label="Industrial")
 plt.plot(x,data[:,DISTANCE],'r-', label="Distance")
 plt.plot(x,data[:,ROOMS],'b-', label="Rooms")
+plt.rcParams.update({'font.size':18})
+plt.legend(prop={'size':22});
+plt.grid()
 plt.show()
 
