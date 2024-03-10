@@ -27,12 +27,14 @@ print(target.shape)
 #  LSTAT    % lower status of the population
 #  MEDV     Median value of owner-occupied homes in $1000's
 
-CRIME = 0; ZN = 1; INDUS = 2; ROOMS = 5;
+CRIME = 0; DISTANCE = 7; INDUS = 2; ROOMS = 5;
 
 
 x = range(0,len(target),1)
 
 plt.figure(figsize=(30,8))
 plt.plot(x,data[:,INDUS],'y-', label="Industrial")
+plt.plot(x,data[:,DISTANCE],'r-', label="Distance")
+plt.plot(x,data[:,ROOMS],'b-', label="Rooms")
 plt.show()
 
