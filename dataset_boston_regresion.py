@@ -1,5 +1,6 @@
 import pandas as pd
 import numpy as np
+import matplotlib.pyplot as plt
 
 data_url = "http://lib.stat.cmu.edu/datasets/boston"
 raw_df = pd.read_csv(data_url, sep="\s+", skiprows=22, header=None)
@@ -27,4 +28,11 @@ print(target.shape)
 #  MEDV     Median value of owner-occupied homes in $1000's
 
 CRIME = 0; ZN = 1; INDUS = 2; ROOMS = 5;
+
+
+x = range(0,len(target),1)
+
+plt.figure(figsize=(30,8))
+plt.plot(x,data[:,INDUS],'y-', label="Industrial")
+plt.show()
 
